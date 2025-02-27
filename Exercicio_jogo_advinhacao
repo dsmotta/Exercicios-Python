@@ -1,0 +1,21 @@
+from random import choice
+
+lista = [0,1,2,3,4,5]
+num = choice(lista)
+c = True
+while c == True:
+    print('\n*****  Jogo da Advinhação  *****')
+    resp = int(input(f'\nDigite um numero de 0 a 5 inteiros: '))
+    if resp > 5 or resp < 0:
+        print(f'\n-=-=-=Numero {resp} nao é aceito=-=-=-')
+   
+    else:
+        if resp == num:
+            print(f'\nPARABÉNS! Você advinhou {resp} e o computador escolheu {num} ')
+            c = False
+       
+        else:
+            print(f'\nTente advinhar novamente! Sua escolha: {resp} computador: {num}')
+            c = True
+            print('-=-'*30)
+   
